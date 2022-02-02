@@ -1,0 +1,108 @@
+#! /bin/bash
+echo ""
+echo ""
+
+date
+
+echo ""
+echo ""
+echo ""
+echo "       *******************************************************************       "
+echo "       *                                                                 *       "
+echo "       *    Home IoT(Raspberry PI) Initial Setting Shell Script (bash)   *       "
+echo "       *                                                                 *       " 
+echo "       *                       @ date: 2022.01.29.                       *       "
+echo "       *                      @ Author: Park Ji Hwan                     *       "
+echo "       *                   @ Homepage: armypark.myds.me                  *       " 
+echo "       *                                                                 *       " 			
+echo "       *******************************************************************       "
+
+
+
+echo ""
+echo ""
+echo ""
+echo ""
+echo "------------------------------------------------------------------------------"
+echo ""
+
+
+
+# [1] 라즈베리파이 업데이트
+while : 
+do
+	read -p "[1] Raspberry PI Update / Upgrade.....[y/n]: " INPUT
+	case $INPUT in
+		"Y"|"y") 
+			sudo apt-get update
+			sudo apt-get upgrade
+			break	
+			;;
+		[Nn]* ) 
+			break
+			;;		
+		* )
+			echo "Please answer [Yy] or [Nn]"
+			echo ""
+			;;  	
+	esac
+done
+
+
+echo ""
+echo ""
+
+
+# ssh 설정 
+
+# gcc/g++ 설치
+
+
+# 블루투스 모듈 설치 
+
+
+echo "------------------------------------------------------------------------------"
+# Python3 설치
+while : 
+do
+	read -p "[4] Python3 Install .....[y/n]: " INPUT
+	case $INPUT in
+		"Y"|"y")
+			sudo apt-get install python3
+			break
+			;;
+		"N"|"n") 
+			break
+			;;
+
+		* )
+			echo "Please answer [Yy] or [Nn]"
+			echo ""
+			;;  	
+
+
+	esac
+done
+
+
+
+# 한글폰트 / 키보드 유틸리티 
+
+
+ 
+# wget 설치
+# sudo apt-get install wget
+
+
+
+# --------------------------------------------------------------------
+
+
+# 기본적으로 read 명령어는 $REPLY 변수에 저장 아니면 read에서 변수명 지정 
+
+
+# if문 예시
+#if [ ${INPUT} = "y" ] || [ ${INPUT} = "Y" ]; then
+#fi
+
+
