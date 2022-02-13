@@ -1,3 +1,14 @@
+/*
+****************************************************************************
+  @ Name: Bluetooth Communication.ino
+  @ Author: J.H
+  @ Date: 2022. 02. 01.
+  @ Update: None
+  @ Comment: Arduino - Raspberry PI 간 블루투스 통신.
+*****************************************************************************
+*/
+
+
 
 #include <SoftwareSerial.h>
  
