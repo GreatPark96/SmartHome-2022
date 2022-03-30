@@ -36,10 +36,12 @@ do
 			sudo apt-get update
 			sudo apt-get upgrade
 			echo "."
-			echo -e "\e[1;32mSuccess OS Update / Upgrade !!\e[0m"
+			echo -e "\e[1;32m[Success] OS Update / Upgrade !!\e[0m"
 			break	
 			;;
 		[Nn]* ) 
+			echo "."
+			echo -e "\e[1;34m[Skip]\e[0m"
 			break
 			;;		
 		* )
@@ -62,10 +64,12 @@ do
 		"Y"|"y")
 			sudo apt-get install python3
 			echo "."
-			echo -e "\e[1;32mSuccess Python3 installed !!\e[0m"
+			echo -e "\e[1;32m[Success] Python3 installed !!\e[0m"
 			break
 			;;
-		"N"|"n") 
+		"N"|"n")
+			echo "."
+			echo -e "\e[1;34m[Skip]\e[0m"
 			break
 			;;
 
@@ -90,10 +94,12 @@ do
 			sudo systemctl enable ssh
 			sudo systemctl start ssh
 			echo "."
-			echo -e "\e[1;32mSuccess SSH enabled !!\e[0m"
+			echo -e "\e[1;32m[Success] SSH enabled !!\e[0m"
 			break
 			;;
 		"N"|"n") 
+			echo "."
+			echo -e "\e[1;34m[Skip]\e[0m"
 			break
 			;;
 
@@ -119,10 +125,12 @@ do
 			sudo apt-get install gcc
 			sudo apt-get install g++
 			echo "."
-			echo -e "\e[1;32mSuccess gcc/gcc++ installed !!\e[0m"
+			echo -e "\e[1;32m[Success] gcc/gcc++ installed !!\e[0m"
 			break
 			;;
 		"N"|"n") 
+			echo "."
+			echo -e "\e[1;34m[Skip]\e[0m"
 			break
 			;;
 
@@ -145,10 +153,12 @@ do
 		"Y"|"y")
 			sudo apt-get install vim
 			echo "."
-			echo -e "\e[1;32mSuccess vim installed !!\e[0m"
+			echo -e "\e[1;32m[Success] vim installed !!\e[0m"
 			break
 			;;
 		"N"|"n") 
+			echo "."
+			echo -e "\e[1;34m[Skip]\e[0m"
 			break
 			;;
 
@@ -171,10 +181,12 @@ do
 		"Y"|"y")
 			sudo apt-get install wget
 			echo "."
-			echo -e "\e[1;32mSuccess wget installed !!\e[0m"
+			echo -e "\e[1;32m[Success] wget installed !!\e[0m"
 			break
 			;;
 		"N"|"n") 
+			echo "."
+			echo -e "\e[1;34m[Skip]\e[0m"
 			break
 			;;
 
