@@ -230,7 +230,36 @@ echo ""
 echo ""
 
 echo "------------------------------------------------------------------------------"
-# [8] 한글폰트 / 키보드 유틸리티
+# [8] Git 설치
+while : 
+do
+	read -p "[8] Git install .....[y/n]: " INPUT
+	case $INPUT in
+		"Y"|"y")
+			sudo apt-get install git
+			git --version 
+			echo "."
+			echo -e "\e[1;32m[Success] Git installed !!\e[0m"
+			break
+			;;
+		"N"|"n") 
+			echo "."
+			echo -e "\e[1;34m[Skip]\e[0m"
+			break
+			;;
+
+		* )
+			echo -e "\e[1;31mPlease answer [Yy] or [Nn]\e[0m"
+			echo ""
+			;;  	
+	esac
+done
+ 
+echo ""
+echo ""
+
+echo "------------------------------------------------------------------------------"
+# [] 한글폰트 / 키보드 유틸리티
 # raspbian OS(22.03.30) 설치 후 기본설치 됨으로 생략 (추가 셋팅 불필요)
 
  
@@ -245,3 +274,4 @@ echo "--------------------------------------------------------------------------
 #fi
 
 
+# 함수로 중복제거 필요. 
