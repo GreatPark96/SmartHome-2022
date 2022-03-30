@@ -1,7 +1,7 @@
 #! /bin/bash
 echo ""
 echo ""
-
+# 시스템 날짜 출력
 date
 
 echo ""
@@ -28,7 +28,7 @@ echo ""
 
 
 
-# [1] 라즈베리파이 업데이트
+# [1] 라즈베리파이 업데이트 / 업그레이드
 while : 
 do
 	read -p "[1] Raspberry PI Update / Upgrade.....[y/n]: " INPUT
@@ -52,20 +52,11 @@ done
 echo ""
 echo ""
 
-
-# ssh 설정 
-
-# gcc/g++ 설치
-
-
-# 블루투스 모듈 설치 
-
-
 echo "------------------------------------------------------------------------------"
-# Python3 설치
+# [2] Python3 설치
 while : 
 do
-	read -p "[4] Python3 Install .....[y/n]: " INPUT
+	read -p "[2] Python3 Install .....[y/n]: " INPUT
 	case $INPUT in
 		"Y"|"y")
 			sudo apt-get install python3
@@ -79,22 +70,129 @@ do
 			echo "Please answer [Yy] or [Nn]"
 			echo ""
 			;;  	
-
-
 	esac
 done
 
 
+echo ""
+echo ""
 
-# 한글폰트 / 키보드 유틸리티 
+echo "------------------------------------------------------------------------------"
+# [3] SSH Enable 
+while : 
+do
+	read -p "[3] SSH Enable .....[y/n]: " INPUT
+	case $INPUT in
+		"Y"|"y")
+			sudo systemctl enable ssh
+			sudo systemctl start ssh
+			echo -e "\e[1;32mSuccess SSH enabled !!\e[0m"
+			break
+			;;
+		"N"|"n") 
+			break
+			;;
 
+		* )
+			echo "Please answer [Yy] or [Nn]"
+			echo ""
+			;;  	
+	esac
+done
+# 접속이 안될 경우 공유기 설정에서 포트포워딩(22)
+# 터미널 명령어 : ssh pi@ip주소 
+
+echo ""
+echo ""
+
+echo "------------------------------------------------------------------------------"
+# [4] gcc/g++ 설치
+while : 
+do
+	read -p "[3] gcc/g++ install .....[y/n]: " INPUT
+	case $INPUT in
+		"Y"|"y")
+			sudo apt-get install gcc
+			sudo apt-get install g++
+			echo -e "\e[1;32mSuccess gcc/gcc++ installed !!\e[0m"
+			break
+			;;
+		"N"|"n") 
+			break
+			;;
+
+		* )
+			echo "Please answer [Yy] or [Nn]"
+			echo ""
+			;;  	
+	esac
+done
+
+echo ""
+echo ""
+
+echo "------------------------------------------------------------------------------"
+# [5] vim 설치
+while : 
+do
+	read -p "[3] vim install .....[y/n]: " INPUT
+	case $INPUT in
+		"Y"|"y")
+			sudo apt-get install vim
+			echo -e "\e[1;32mSuccess vim installed !!\e[0m"
+			break
+			;;
+		"N"|"n") 
+			break
+			;;
+
+		* )
+			echo "Please answer [Yy] or [Nn]"
+			echo ""
+			;;  	
+	esac
+done
+
+echo ""
+echo ""
+
+echo "------------------------------------------------------------------------------"
+# [6] wget 설치
+while : 
+do
+	read -p "[3] wget install .....[y/n]: " INPUT
+	case $INPUT in
+		"Y"|"y")
+			sudo apt-get install wget
+			echo -e "\e[1;32mSuccess wget installed !!\e[0m"
+			break
+			;;
+		"N"|"n") 
+			break
+			;;
+
+		* )
+			echo "Please answer [Yy] or [Nn]"
+			echo ""
+			;;  	
+	esac
+done
+ 
+echo ""
+echo ""
+
+echo "------------------------------------------------------------------------------"
+# [7] 블루투스 모듈 설치 
+
+
+
+
+
+echo "------------------------------------------------------------------------------"
+# [8] 한글폰트 / 키보드 유틸리티
+# raspbian OS(22.03.30) 설치 후 기본설치 됨으로 생략 (추가 셋팅 불필요)
 
  
-# wget 설치
-# sudo apt-get install wget
-
-
-
 # --------------------------------------------------------------------
 
 
