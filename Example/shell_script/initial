@@ -237,6 +237,7 @@ do
 	case $INPUT in
 		"Y"|"y")
 			sudo apt-get install git
+			echo "."
 			git --version 
 			echo "."
 			echo -e "\e[1;32m[Success] Git installed !!\e[0m"
@@ -275,3 +276,9 @@ echo "--------------------------------------------------------------------------
 
 
 # 함수로 중복제거 필요. 
+
+
+
+echo "------------------------------------------------------------------------------"
+echo "End Software"
+
