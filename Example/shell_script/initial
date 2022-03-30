@@ -119,7 +119,7 @@ echo "--------------------------------------------------------------------------
 # [4] gcc/g++ 설치
 while : 
 do
-	read -p "[3] gcc/g++ install .....[y/n]: " INPUT
+	read -p "[4] gcc/g++ install .....[y/n]: " INPUT
 	case $INPUT in
 		"Y"|"y")
 			sudo apt-get install gcc
@@ -148,7 +148,7 @@ echo "--------------------------------------------------------------------------
 # [5] vim 설치
 while : 
 do
-	read -p "[3] vim install .....[y/n]: " INPUT
+	read -p "[5] vim install .....[y/n]: " INPUT
 	case $INPUT in
 		"Y"|"y")
 			sudo apt-get install vim
@@ -176,7 +176,7 @@ echo "--------------------------------------------------------------------------
 # [6] wget 설치
 while : 
 do
-	read -p "[3] wget install .....[y/n]: " INPUT
+	read -p "[6] wget install .....[y/n]: " INPUT
 	case $INPUT in
 		"Y"|"y")
 			sudo apt-get install wget
@@ -201,11 +201,33 @@ echo ""
 echo ""
 
 echo "------------------------------------------------------------------------------"
-# [7] 블루투스 모듈 설치 
+# [7] Bluetooth library 설치
+while : 
+do
+	read -p "[7] Bluetooth library install .....[y/n]: " INPUT
+	case $INPUT in
+		"Y"|"y")
+			sudo apt-get install bluetooth blueman bluez
+			sudo apt-get install python-bluetooth
+			echo "."
+			echo -e "\e[1;32m[Success] Bluetooth library installed !!\e[0m"
+			break
+			;;
+		"N"|"n") 
+			echo "."
+			echo -e "\e[1;34m[Skip]\e[0m"
+			break
+			;;
 
-
-
-
+		* )
+			echo -e "\e[1;31mPlease answer [Yy] or [Nn]\e[0m"
+			echo ""
+			;;  	
+	esac
+done
+ 
+echo ""
+echo ""
 
 echo "------------------------------------------------------------------------------"
 # [8] 한글폰트 / 키보드 유틸리티
