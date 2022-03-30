@@ -2,8 +2,8 @@
 echo ""
 echo ""
 # 함수 정의
-
-// 항목구분 개행 함수
+#
+# 항목구분 개행 함수
 function line_feed()
 {
 	echo ""
