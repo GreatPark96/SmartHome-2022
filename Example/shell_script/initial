@@ -200,6 +200,8 @@ do
 		"Y"|"y")
 			sudo apt-get install bluetooth blueman bluez
 			sudo apt-get install python-bluetooth
+			#sudo apt-get install bluez libbluetooth-dev pi-bluetooth
+			pip3 install pybluez
 			echo "."
 			echo -e "\e[1;32m[Success] Bluetooth library installed !!\e[0m"
 			break
