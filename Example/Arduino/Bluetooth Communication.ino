@@ -11,7 +11,8 @@
 
 
 #include <SoftwareSerial.h>
- 
+
+// 송/수신 포트지정
 int RX=7; // 아두이노 디지털 7번 핀과 BT 모듈 TX 연결
 int TX=8; // 아두이노 디지털 8번 핀과 BT 모듈 RX 연결
 
@@ -23,11 +24,12 @@ void setup(){
 }
  
 void loop(){
-  
+  // 데이터 수신
   if (bluetooth.available()) // 블루투스 시리얼에서 읽을 수 있는 바이트의 수가 0이 아니면
   {
     Serial.write(bluetooth.read());
   }
+  // 데이터 송신
   if (Serial.available()) // 아두이노 시리얼에서 읽을 수 있는 바이트의 수가 0이 아니면
   {
     bluetooth.write(Serial.read()); 
