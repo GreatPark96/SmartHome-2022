@@ -1,4 +1,3 @@
-# 예외처리하고 클래스로 구현 가능하면 클래스로 구현
 import threading
 from bluetooth import *
 import sys
