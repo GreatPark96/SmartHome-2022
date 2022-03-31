@@ -28,8 +28,9 @@ def data_receive():
             result = int(decode_data)
         else:
             result = decode_data
-            
-        print(result)
+        
+        print()    
+        print("receive message :", result)
 
 # Python to Arduino Data 송신 함수 
 def data_send():
