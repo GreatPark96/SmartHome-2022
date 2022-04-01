@@ -1,3 +1,13 @@
+'''
+****************************************************************************
+  @ Name: BT_Communication.py
+  @ Author: J.H
+  @ Date: 2022. 03. 31.
+  @ Update: None
+  @ Comment: Arduino - Raspberry PI 간 블루투스 통신.
+*****************************************************************************
+'''
+
 import threading
 from bluetooth import *
 import sys
